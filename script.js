@@ -17,7 +17,7 @@ I’m not asking you to wait, to decide, or to fix anything. I only ask that, if
 // split into words but keep newlines as paragraph breaks
 function splitIntoWords(text) {
   // Replace double newlines with a special token to preserve paragraphs
-  const paraToken = '<<<PARA>>>';
+  const paraToken = '       ';
   const withToken = text.replace(/\n{2,}/g, paraToken);
   // split on spaces but keep tokens as separate "words"
   return withToken.split(/\s+/).map(w => w === paraToken ? '\n\n' : w);
