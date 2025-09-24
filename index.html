@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letter in an Envelope</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <div class="envelope-wrap">
+      <div id="envelope" class="envelope" role="button" tabindex="0" aria-label="Open the letter">
+        <div class="flap"></div>
+        <div class="body"></div>
+      </div>
+
+      <div class="letter" id="letter">
+        <div class="letter-paper" id="letterPaper">
+          <div id="textContainer" class="text"></div>
+          <div class="controls">
+            <button id="replayBtn">Replay</button>
+            <button id="fastBtn">Reveal Faster</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="hint">Tap the envelope if you're interested 💌</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+    </html>
