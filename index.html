@@ -1,33 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Letter kse dae ko masabi sa personal HAHAHAHAHAHAHAHA</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cringee</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .line {
+      opacity: 0;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      transition: opacity 2s ease;
+    }
+
+    .visible {
+      opacity: 1;
+    }
+
+    .heart {
+      color: #ff5f7e;
+    }
+  </style>
 </head>
 <body>
-  <main>
-    <div class="envelope-wrap">
-      <div id="envelope" class="envelope" role="button" tabindex="0" aria-label="Open the letter">
-        <div class="flap"></div>
-        <div class="body"></div>
-      </div>
+  <div id="message">
+    <div class="line">It’s strange…</div>
+    <div class="line">how someone can mean everything one day,</div>
+    <div class="line">and become just a memory the next.</div>
+    <div class="line">I still wait for your name to appear on my screen,</div>
+    <div class="line">even though I know it never will.</div>
+    <div class="line">The nights feel longer now —</div>
+    <div class="line">maybe because your voice used to fill the silence.</div>
+    <div class="line">I keep pretending I’m fine,</div>
+    <div class="line">but even the mirror knows I’m lying.</div>
+    <div class="line">You moved on…</div>
+    <div class="line">and I’m still here,</div>
+    <div class="line">stuck in the moment you left.</div>
+    <div class="line">Funny how time heals everything —</div>
+    <div class="line">except the things it caused.</div>
+    <div class="line">I hope you’ll read this someday.</div>
+    <div class="line">I love you forever —</div>
+    <div class="line">and I’m always here, waiting. <span class="heart">🙁</span></div>
+  </div>
 
-      <div class="letter" id="letter">
-        <div class="letter-paper" id="letterPaper">
-          <div id="textContainer" class="text"></div>
-          <div class="controls">
-            <button id="replayBtn">Replay?</button>
-            <button id="fastBtn">hugak?</button>
-          </div>
-        </div>
-      </div>
+  <script>
+    const lines = document.querySelectorAll('.line');
+    let delay = 0;
 
-      <p class="hint">Tap the envelope(cringe? OA?? I knowww po)</p>
-    </div>
-  </main>
-
-  <script src="script.js"></script>
+    lines.forEach((line, index) => {
+      setTimeout(() => {
+        line.classList.add('visible');
+      }, delay);
+      delay += 2500; // Adjust timing between lines (2.5 seconds each)
+    });
+  </script>
 </body>
-    </html>
+</html>
